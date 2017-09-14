@@ -13,18 +13,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/moment.min.js"></script>
-    <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
     <script src="js/require.js"></script>
-    <script src="js/ical-generator/calendar.js"></script>
-    <script src="js/ical-generator/event.js"></script>
-    <script src="js/ical-generator/index.js"></script>
-    <script src="js/ical-generator/attendee.js"></script>
-    <script src="js/ical-generator/alarm.js"></script>
-    <script src="js/ical-generator/_tools.js"></script>
 
-    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" type="text/css" href="css/popup.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
@@ -44,9 +38,16 @@
                   </tbody>
                 </table>
             </div>
-            <!--<div class="col">-->
-            <!--  <button id="download" type="button" class="btn btn-circle btn-lg"><i class="fa fa-download"></i></button>-->
-            <!--</div>-->
+            <div class="col">
+              <div class="dropdown" id="exportMenu">
+                <button type="button" class="btn btn-lg btn-block dropdown-toggle" id="menuButton">Exporter le planning</button>
+                <div class="dropdown-menu" aria-labelledby="menuButton">
+                  <input type='text' class="form-control dropdown-item" id="exportFrom" placeholder="De:" required/>
+                  <input type='text' class="form-control dropdown-item" id="exportTo" placeholder="A:" required/>
+                  <button type="button" class="btn btn-lg btn-block dropdown-item" id="exportButton">Télécharger</button>
+                </div>
+              </div>
+            </div>
         </div>
     </div>
 </body>
